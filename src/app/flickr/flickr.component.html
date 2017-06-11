@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="cards">
+      <md-input-container>
+        <input mdInput placeholder="Image Search" type="search" [formControl]="searchControl">
+      </md-input-container>
+    </div>
+
+    <div class="cards">
+      <md-card *ngFor="let photo of photos">
+          <img md-card-image src={{photo.url}}>
+          <md-card-subtitle>{{photo.title}}</md-card-subtitle>
+      </md-card>
+    </div>
+</div>
