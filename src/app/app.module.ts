@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FlickrComponent } from './flickr/flickr.component';
+import {FlickrService} from './flickr.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FlickrComponent } from './flickr/flickr.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [FlickrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
