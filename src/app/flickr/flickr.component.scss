@@ -7,29 +7,29 @@
 @mixin scale($zoom) {
   transition: $transition;
   &:hover {
-   transform: scale($zoom);
+    transform: scale($zoom);
   }
 }
 
-$transition: .3s ease-in-out all;
+$transition: 0.3s ease-in-out all;
 
 .cards {
-    @include flex(row, wrap);
-    justify-content: space-between;
-    .mat-input-container {
-        margin: 20px auto 40px;
+  @include flex(row, wrap);
+  justify-content: space-between;
+  .mat-input-container {
+    margin: 20px auto 40px;
+  }
+  .mat-card {
+    width: 30%;
+    margin: 2% 1%;
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      transition: $transition;
+      &:hover {
+        @include scale(1.04);
+      }
     }
-    .mat-card {
-        max-width: 250px;
-        margin: 2% 1%;
-        .mat-card-image {
-            width: 100%;
-            height: auto;
-            margin: 0;
-            transition: $transition;
-            &:hover {
-                @include scale(1.04);
-            }
-        }
-    }
+  }
 }

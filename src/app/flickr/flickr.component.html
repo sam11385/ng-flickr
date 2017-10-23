@@ -1,14 +1,14 @@
 <div class="container">
-    <div class="cards">
-      <md-input-container>
-        <input mdInput placeholder="Image Search" type="search" [formControl]="searchControl">
-      </md-input-container>
-    </div>
+  <div class="cards">
+    <mat-form-field>
+      <input matInput placeholder="Image Search" type="search" [formControl]="searchControl">
+    </mat-form-field>
+  </div>
 
-    <div class="cards">
-      <md-card *ngFor="let photo of photos">
-          <img md-card-image src={{photo.url}}>
-          <md-card-subtitle>{{photo.title}}</md-card-subtitle>
-      </md-card>
-    </div>
+  <div class="cards">
+    <mat-card *ngFor="let photo of photos">
+      <img md-card-image src={{photo.url}}>
+      <mat-card-subtitle>{{photo.title}}</mat-card-subtitle>
+    </mat-card>
+  </div>
 </div>
